@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EkoGrills UK — The Flavour of Mercy | Authentic Flame Grilled BBQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bbq: {
+                            black: '#080808',
+                            dark: '#0D0D0D',
+                            card: '#121212',
+                            border: '#2A2A2A',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            goldDark: '#C5A059',
+                            orange: '#F97316',
+                            orangeBright: '#FF6B00',
+                            red: '#DC2626',
+                            redBright: '#EF4444',
+                            maroon: '#6B1111'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Cinzel"', 'serif'],
+                        display: ['"Bebas Neue"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #080808;
+            color: #E5E7EB;
+        }
+
+        /* Gold Double-Border Frame styled after PDF Menu */
+        .pdf-gold-frame {
+            border: 2px solid #C5A059;
+            outline: 1px solid #8C6F2D;
+            outline-offset: -5px;
+        }
+
+        .pdf-card-frame {
+            border: 1px solid #C5A059;
+            box-shadow: inset 0 0 0 1px rgba(197, 160, 89, 0.2);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .pdf-card-frame:hover {
+            border-color: #EF4444;
+            box-shadow: 0 0 18px -2px rgba(239, 68, 68, 0.35), inset 0 0 0 1px rgba(239, 68, 68, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Gold & Orange Metallic Flame Gradient Text */
+        .brand-title-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F97316 50%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 4px rgba(249, 115, 22, 0.3));
+        }
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080808;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-bbq-red selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-bbq-maroon via-bbq-red to-bbq-maroon text-white font-semibold text-xs md:text-sm py-2 px-4 text-center tracking-widest uppercase border-b border-bbq-gold/40">
+        <i class="fa-solid fa-fire text-bbq-goldLight mr-2"></i> Authentic Flame-Grilled BBQ — Order Online For Pickup & Delivery
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-40 bg-bbq-dark/95 backdrop-blur-md border-b-2 border-bbq-gold/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- LOGO & BRAND TITLE (GOLD + ORANGE GRADIENT) -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full bg-bbq-card border border-bbq-gold flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform overflow-hidden p-1">
+                    <svg viewBox="0 0 100 100" class="w-full h-full">
+                        <path d="M50 10 C 25 35, 30 65, 50 90 C 70 65, 75 35, 50 10" fill="#DC2626"/>
+                        <path d="M50 25 C 35 45, 38 65, 50 82 C 62 65, 65 45, 50 25" fill="#D4AF37"/>
+                        <path d="M30 68 Q 50 55 70 68 Q 50 78 30 68" fill="#121212" stroke="#FFFFFF" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-serif font-black text-2xl tracking-widest block leading-none brand-title-gradient">EKOGRILLS <span class="text-white">UK</span></span>
+                    <span class="text-[10px] tracking-widest text-bbq-gold font-serif italic block">The Flavour of Mercy — Authentic Flame Grilled BBQ</span>
+                </div>
+            </a>
+
+            <!-- NAV LINKS (NO SCAN TO CHAT IN HEADER) -->
+            <nav class="hidden md:flex items-center gap-8 text-xs font-bold tracking-wider uppercase text-gray-300">
+                <a href="#menu" class="hover:text-bbq-gold transition-colors">Full Menu</a>
+                <a href="#custom-builder" class="hover:text-bbq-orange transition-colors flex items-center gap-1.5 text-bbq-gold font-extrabold">
+                    <i class="fa-solid fa-sliders text-xs"></i> Platter Builder
+                </a>
+                <a href="#catering" class="hover:text-bbq-gold transition-colors">Catering & Booking</a>
+                <a href="#allergens-info" class="hover:text-bbq-gold transition-colors">Allergens Guide</a>
+            </nav>
+
+            <!-- CART DRAWER TRIGGER & PHONE ACTION -->
+            <div class="flex items-center gap-3">
+                <a href="tel:07938391725" class="hidden sm:flex items-center gap-2 text-xs font-bold bg-bbq-card hover:bg-bbq-border border border-bbq-gold/60 text-bbq-gold px-3.5 py-2 rounded transition-all">
+                    <i class="fa-solid fa-phone text-bbq-red"></i> 07938391725
+                </a>
+                <button onclick="toggleCart()" class="relative bg-gradient-to-r from-bbq-red via-bbq-maroon to-bbq-black text-white border border-bbq-gold px-4 py-2.5 rounded font-bold flex items-center gap-2 hover:brightness-110 transition-all shadow-md">
+                    <i class="fa-solid fa-basket-shopping text-sm text-bbq-goldLight"></i>
+                    <span class="hidden sm:inline text-xs uppercase tracking-wider">Cart</span>
+                    <span id="cart-badge" class="bg-bbq-gold text-black text-xs font-black rounded-full px-2 py-0.5 ml-1">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="relative bg-bbq-black py-12 lg:py-16 border-b-2 border-bbq-gold/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="pdf-gold-frame bg-bbq-card p-6 sm:p-10 rounded-lg relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-8 space-y-5 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-bbq-black border border-bbq-gold/50 text-bbq-gold text-xs font-bold uppercase tracking-widest">
+                            <i class="fa-solid fa-fire-flame-curved text-bbq-orange"></i> Flame-Grilled Perfection
+                        </div>
+                        <h1 class="text-4xl sm:text-6xl font-black font-serif tracking-tight uppercase leading-tight brand-title-gradient">
+                            EKOGRILLS <span class="text-white">UK</span>
+                        </h1>
+                        <p class="font-serif italic text-bbq-gold text-lg sm:text-xl border-b border-bbq-border pb-3">
+                            "The Flavour of Mercy — Authentic Flame Grilled BBQ"
+                        </p>
+                        <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed max-w-2xl">
+                            Thinly sliced tender beef suya, flame-grilled lamb chops, seasoned croaker fish cuts, and crispy peppered wings infused with traditional Yaji spice blends.
+                        </p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#menu" class="bg-bbq-red hover:bg-red-700 text-white font-bold uppercase tracking-wider px-8 py-3.5 rounded text-xs border border-bbq-gold transition-all shadow-lg flex items-center gap-2">
+                                View Menu & Order <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="#custom-builder" class="bg-bbq-black hover:bg-bbq-dark text-bbq-gold font-bold uppercase tracking-wider px-7 py-3.5 rounded text-xs border border-bbq-gold transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-sliders text-bbq-orange"></i> Build Custom Platter
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- DIRECT QUICK CONTACT BADGE -->
+                    <div class="lg:col-span-4 flex flex-col items-center justify-center">
+                        <div class="w-full max-w-xs bg-bbq-black p-5 rounded border border-bbq-gold text-center space-y-3 shadow-xl">
+                            <div class="w-12 h-12 mx-auto rounded-full border border-bbq-gold flex items-center justify-center bg-bbq-dark">
+                                <i class="fa-solid fa-crown text-lg text-bbq-gold"></i>
+                            </div>
+                            <h3 class="text-bbq-gold font-serif font-bold text-xs tracking-widest uppercase">Direct Order & Catering</h3>
+                            <div class="text-xs text-gray-300 font-mono space-y-1">
+                                <p class="text-white font-bold text-sm">📞 07938391725</p>
+                                <p class="text-bbq-orange">📸 @ekogrills_uk</p>
+                                <p class="text-gray-400">✉️ ekogrillsuk@outlook.com</p>
+                            </div>
+                            <a href="https://wa.me/447938391725" target="_blank" class="block w-full bg-green-700 hover:bg-green-800 text-white text-xs font-bold py-2 rounded transition-all">
+                                <i class="fa-brands fa-whatsapp mr-1"></i> Quick Message
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEARCH & ALLERGEN TOOLBAR -->
+    <section class="bg-bbq-dark border-b border-bbq-gold/40 sticky top-20 z-30 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+                
+                <!-- LIVE SEARCH -->
+                <div class="relative flex-1">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-bbq-gold text-xs"></i>
+                    <input type="text" id="search-input" onkeyup="filterMenu()" placeholder="Search suya, lamb chops, wings, fish..." class="w-full bg-bbq-black border border-bbq-gold/60 focus:border-bbq-red text-white text-xs rounded pl-10 pr-4 py-2.5 focus:outline-none font-medium">
+                </div>
+
+                <!-- ALLERGEN FILTER BUTTONS -->
+                <div class="flex items-center gap-2 overflow-x-auto pb-1 lg:pb-0 text-xs">
+                    <span class="text-bbq-gold font-bold text-xs whitespace-nowrap flex items-center gap-1 uppercase tracking-wider">
+                        <i class="fa-solid fa-triangle-exclamation text-bbq-red"></i> Allergen Filter:
+                    </span>
+                    <button onclick="toggleAllergenFilter('peanuts')" id="alg-peanuts" class="allergen-btn bg-bbq-black border border-bbq-border hover:border-bbq-red text-gray-300 px-3 py-1.5 rounded whitespace-nowrap transition-all flex items-center gap-1">
+                        <i class="fa-solid fa-ban text-red-500 text-[10px]"></i> Peanuts (Yaji)
+                    </button>
+                    <button onclick="toggleAllergenFilter('fish')" id="alg-fish" class="allergen-btn bg-bbq-black border border-bbq-border hover:border-bbq-red text-gray-300 px-3 py-1.5 rounded whitespace-nowrap transition-all flex items-center gap-1">
+                        <i class="fa-solid fa-fish text-blue-400 text-[10px]"></i> Fish
+                    </button>
+                    <button onclick="toggleAllergenFilter('mustard')" id="alg-mustard" class="allergen-btn bg-bbq-black border border-bbq-border hover:border-bbq-red text-gray-300 px-3 py-1.5 rounded whitespace-nowrap transition-all flex items-center gap-1">
+                        <i class="fa-solid fa-jar text-yellow-500 text-[10px]"></i> Mustard
+                    </button>
+                    <button onclick="resetAllergenFilters()" class="text-bbq-gold hover:text-white px-2 py-1 text-xs underline">Reset</button>
+                </div>
+            </div>
+            
+            <!-- CATEGORY NAV TABS -->
+            <div class="flex items-center gap-2 mt-4 overflow-x-auto pb-1 border-t border-bbq-border pt-3">
+                <button onclick="filterCategory('all', event)" class="cat-btn active bg-bbq-red text-white font-bold text-xs px-4 py-2 rounded uppercase tracking-wider transition-all border border-bbq-gold">All Items</button>
+                <button onclick="filterCategory('single', event)" class="cat-btn bg-bbq-black hover:bg-bbq-border text-bbq-gold font-bold text-xs px-4 py-2 rounded uppercase tracking-wider transition-all border border-bbq-gold/40">1. Single Boxes</button>
+                <button onclick="filterCategory('duo', event)" class="cat-btn bg-bbq-black hover:bg-bbq-border text-bbq-gold font-bold text-xs px-4 py-2 rounded uppercase tracking-wider transition-all border border-bbq-gold/40">2. Duo Mix</button>
+                <button onclick="filterCategory('trio', event)" class="cat-btn bg-bbq-black hover:bg-bbq-border text-bbq-gold font-bold text-xs px-4 py-2 rounded uppercase tracking-wider transition-all border border-bbq-gold/40">3. Trio Combos</button>
+                <button onclick="filterCategory('sharing', event)" class="cat-btn bg-bbq-black hover:bg-bbq-border text-bbq-gold font-bold text-xs px-4 py-2 rounded uppercase tracking-wider transition-all border border-bbq-gold/40">4. Sharing Trays</button>
+                <button onclick="filterCategory('builder', event)" class="cat-btn bg-bbq-black border border-bbq-gold text-bbq-gold font-bold text-xs px-4 py-2 rounded uppercase tracking-wider transition-all">5. Build Your Own</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+        <!-- 1. SINGLE PROTEIN BOXES -->
+        <section id="menu" class="space-y-6">
+            <div class="border-b-2 border-bbq-gold/60 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold font-serif text-bbq-gold tracking-wide uppercase">1. SINGLE PROTEIN BOXES</h2>
+                    <p class="text-xs text-gray-400 font-light">Perfect for individual meals or light sharing.</p>
+                </div>
+                <span class="text-[11px] font-bold text-bbq-red uppercase tracking-widest bg-bbq-black border border-bbq-gold/50 px-3 py-1 rounded">Individual Boxes</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- SUYA BOX -->
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="single" data-allergens="peanuts,mustard" data-name="suya box premium beef">
+                    <div>
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <h3 class="font-bold text-lg text-bbq-red font-serif tracking-wider uppercase">SUYA BOX</h3>
+                            <span class="text-xl font-black text-bbq-gold">£36.00</span>
+                        </div>
+                        <p class="text-xs text-gray-300 font-light mb-3">Premium beef suya, sliced onions & signature Yaji spice</p>
+                        <div class="flex flex-wrap items-center gap-1.5 mb-4">
+                            <span class="text-[10px] bg-red-950/80 border border-red-700 text-red-300 px-2 py-0.5 rounded font-mono">Contains Peanuts (Yaji)</span>
+                            <button onclick="explainDish('SUYA BOX', 'Thinly sliced tender beef marinated in traditional Nigerian Yaji spice blend (ground peanuts, ginger, chili peppers, garlic, local spices), dry-rubbed and flame-grilled. Served with sliced red onions.')" class="text-[10px] text-bbq-gold hover:underline">
+                                <i class="fa-solid fa-circle-info"></i> Details
+                            </button>
+                        </div>
+                    </div>
+                    <button onclick="addToCart('suya-box', 'SUYA BOX', 36.00, 'Single Protein Boxes')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <!-- LAMB CHOPS BOX -->
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="single" data-allergens="mustard" data-name="lamb chops box">
+                    <div>
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <h3 class="font-bold text-lg text-bbq-red font-serif tracking-wider uppercase">LAMB CHOPS BOX</h3>
+                            <span class="text-xl font-black text-bbq-gold">£22.00</span>
+                        </div>
+                        <p class="text-xs text-gray-300 font-light mb-3">Flame-grilled lamb chops (6)</p>
+                    </div>
+                    <button onclick="addToCart('lamb-chops-box', 'LAMB CHOPS BOX', 22.00, 'Single Protein Boxes')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <!-- FISH CUTS BOX -->
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="single" data-allergens="fish,mustard" data-name="fish cuts box croaker">
+                    <div>
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <h3 class="font-bold text-lg text-bbq-red font-serif tracking-wider uppercase">FISH CUTS BOX</h3>
+                            <span class="text-xl font-black text-bbq-gold">£11.00</span>
+                        </div>
+                        <p class="text-xs text-gray-300 font-light mb-3">Seasoned croaker fish cuts with spicy herb glaze (2)</p>
+                        <div class="flex flex-wrap items-center gap-1.5 mb-4">
+                            <span class="text-[10px] bg-blue-950/80 border border-blue-700 text-blue-300 px-2 py-0.5 rounded font-mono">Contains Fish (Croaker)</span>
+                        </div>
+                    </div>
+                    <button onclick="addToCart('fish-cuts-box', 'FISH CUTS BOX', 11.00, 'Single Protein Boxes')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <!-- CHICKEN WINGS BOX -->
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="single" data-allergens="mustard" data-name="chicken wings box">
+                    <div>
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <h3 class="font-bold text-lg text-bbq-red font-serif tracking-wider uppercase">CHICKEN WINGS BOX</h3>
+                            <span class="text-xl font-black text-bbq-gold">£9.50</span>
+                        </div>
+                        <p class="text-xs text-gray-300 font-light mb-3">Crispy spicy flame-grilled wings (10)</p>
+                    </div>
+                    <button onclick="addToCart('chicken-wings-box', 'CHICKEN WINGS BOX', 9.50, 'Single Protein Boxes')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <!-- TURKEY WINGS BOX -->
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="single" data-allergens="mustard" data-name="turkey wings box">
+                    <div>
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <h3 class="font-bold text-lg text-bbq-red font-serif tracking-wider uppercase">TURKEY WINGS BOX</h3>
+                            <span class="text-xl font-black text-bbq-gold">£8.00</span>
+                        </div>
+                        <p class="text-xs text-gray-300 font-light mb-3">Tender peppered grilled turkey wings (2)</p>
+                    </div>
+                    <button onclick="addToCart('turkey-wings-box', 'TURKEY WINGS BOX', 8.00, 'Single Protein Boxes')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <!-- CHICKEN KEBABS BOX -->
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="single" data-allergens="mustard" data-name="chicken kebabs box skewers">
+                    <div>
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <h3 class="font-bold text-lg text-bbq-red font-serif tracking-wider uppercase">CHICKEN KEBABS BOX</h3>
+                            <span class="text-xl font-black text-bbq-gold">£10.00</span>
+                        </div>
+                        <p class="text-xs text-gray-300 font-light mb-3">Flame-grilled chicken skewers with veggies (2)</p>
+                    </div>
+                    <button onclick="addToCart('chicken-kebabs-box', 'CHICKEN KEBABS BOX', 10.00, 'Single Protein Boxes')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <!-- CHICKEN THIGHS BOX -->
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="single" data-allergens="mustard" data-name="chicken thighs box">
+                    <div>
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <h3 class="font-bold text-lg text-bbq-red font-serif tracking-wider uppercase">CHICKEN THIGHS BOX</h3>
+                            <span class="text-xl font-black text-bbq-gold">£7.00</span>
+                        </div>
+                        <p class="text-xs text-gray-300 font-light mb-3">Soft, juicy grilled chicken thighs (3)</p>
+                    </div>
+                    <button onclick="addToCart('chicken-thighs-box', 'CHICKEN THIGHS BOX', 7.00, 'Single Protein Boxes')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. DUO MIX PLATTERS -->
+        <section class="space-y-6">
+            <div class="border-b-2 border-bbq-gold/60 pb-3">
+                <h2 class="text-2xl sm:text-3xl font-bold font-serif text-bbq-gold tracking-wide uppercase">2. DUO MIX PLATTERS</h2>
+                <p class="text-xs text-gray-400 font-light">Select two proteins for a balanced individual meal.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="duo" data-allergens="peanuts,mustard" data-name="suya + wings (10)">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-white font-serif uppercase">Suya + Wings (10)</h3>
+                        <span class="text-xl font-black text-bbq-red">£40.00</span>
+                    </div>
+                    <p class="text-xs text-gray-400 font-light mb-3">Beef Suya & 10 Crispy Spicy Flame-Grilled Wings</p>
+                    <button onclick="addToCart('duo-suya-wings', 'Suya + Wings (10)', 40.00, 'Duo Mix Platters')" class="w-full bg-bbq-card hover:bg-bbq-red text-bbq-gold hover:text-white font-bold py-2 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="duo" data-allergens="mustard" data-name="lamb chops(6) + kebabs(2)">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-white font-serif uppercase">Lamb Chops (6) + Kebabs (2)</h3>
+                        <span class="text-xl font-black text-bbq-red">£27.00</span>
+                    </div>
+                    <p class="text-xs text-gray-400 font-light mb-3">6 Flame-Grilled Lamb Chops & 2 Chicken Kebabs</p>
+                    <button onclick="addToCart('duo-lamb-kebabs', 'Lamb Chops (6) + Kebabs (2)', 27.00, 'Duo Mix Platters')" class="w-full bg-bbq-card hover:bg-bbq-red text-bbq-gold hover:text-white font-bold py-2 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="duo" data-allergens="fish,mustard" data-name="fish cuts (2) + turkey (4)">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-white font-serif uppercase">Fish Cuts (2) + Turkey (4)</h3>
+                        <span class="text-xl font-black text-bbq-red">£17.00</span>
+                    </div>
+                    <p class="text-xs text-gray-400 font-light mb-3">2 Seasoned Croaker Cuts & 4 Peppered Turkey Wings</p>
+                    <button onclick="addToCart('duo-fish-turkey', 'Fish Cuts (2) + Turkey (4)', 17.00, 'Duo Mix Platters')" class="w-full bg-bbq-card hover:bg-bbq-red text-bbq-gold hover:text-white font-bold py-2 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="duo" data-allergens="peanuts,mustard" data-name="chicken thighs (5) + suya">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-white font-serif uppercase">Chicken Thighs (5) + Suya</h3>
+                        <span class="text-xl font-black text-bbq-red">£40.00</span>
+                    </div>
+                    <p class="text-xs text-gray-400 font-light mb-3">5 Soft Grilled Chicken Thighs & Premium Beef Suya</p>
+                    <button onclick="addToCart('duo-thighs-suya', 'Chicken Thighs (5) + Suya', 40.00, 'Duo Mix Platters')" class="w-full bg-bbq-card hover:bg-bbq-red text-bbq-gold hover:text-white font-bold py-2 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. TRIO COMBO PLATTERS -->
+        <section class="space-y-6">
+            <div class="border-b-2 border-bbq-gold/60 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold font-serif text-bbq-gold tracking-wide uppercase">3. TRIO COMBO PLATTERS</h2>
+                    <p class="text-xs text-gray-400 font-light">Our most popular category — ideal for pairs & small groups.</p>
+                </div>
+                <span class="text-[11px] font-bold text-bbq-gold uppercase tracking-widest bg-bbq-black border border-bbq-gold px-3 py-1 rounded">Most Popular</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="trio" data-allergens="peanuts,mustard" data-name="the crowd pleaser beef suya wings turkey">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl text-bbq-red font-serif tracking-wider uppercase">THE CROWD PLEASER</h3>
+                            <span class="text-2xl font-black text-bbq-gold">£55.00</span>
+                        </div>
+                        <p class="text-xs text-white font-medium mb-4">Beef Suya + Chicken Wings (15) + Turkey Wings (6)</p>
+                    </div>
+                    <button onclick="addToCart('trio-crowd-pleaser', 'THE CROWD PLEASER', 55.00, 'Trio Combos')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="trio" data-allergens="peanuts,mustard" data-name="the pitmaster trio lamb chops beef suya chicken thighs">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl text-bbq-red font-serif tracking-wider uppercase">THE PITMASTER TRIO</h3>
+                            <span class="text-2xl font-black text-bbq-gold">£65.00</span>
+                        </div>
+                        <p class="text-xs text-white font-medium mb-4">Lamb Chops (6) + Beef Suya + Chicken Thighs (6)</p>
+                    </div>
+                    <button onclick="addToCart('trio-pitmaster', 'THE PITMASTER TRIO', 65.00, 'Trio Combos')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="trio" data-allergens="fish,mustard" data-name="seafood & poultry fish cuts wings turkey">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl text-bbq-red font-serif tracking-wider uppercase">SEAFOOD & POULTRY</h3>
+                            <span class="text-2xl font-black text-bbq-gold">£50.00</span>
+                        </div>
+                        <p class="text-xs text-white font-medium mb-4">Fish Cuts (6) + Chicken Wings (12) + Turkey Wings (4)</p>
+                    </div>
+                    <button onclick="addToCart('trio-seafood-poultry', 'SEAFOOD & POULTRY', 50.00, 'Trio Combos')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+                <div class="menu-card pdf-card-frame bg-bbq-black p-5 rounded flex flex-col justify-between" data-category="trio" data-allergens="peanuts,mustard" data-name="the feast chicken kebabs suya lamb chops">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl text-bbq-red font-serif tracking-wider uppercase">THE FEAST</h3>
+                            <span class="text-2xl font-black text-bbq-gold">£75.00</span>
+                        </div>
+                        <p class="text-xs text-white font-medium mb-4">Chicken Kebabs (6) + Beef Suya + Lamb Chops (9)</p>
+                    </div>
+                    <button onclick="addToCart('trio-feast', 'THE FEAST', 75.00, 'Trio Combos')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add To Order
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. SHARING TRAYS -->
+        <section class="space-y-6">
+            <div class="border-b-2 border-bbq-gold/60 pb-3">
+                <span class="text-xs font-bold text-bbq-red uppercase tracking-widest block mb-1">FAMILY & PARTY PLATTERS</span>
+                <h2 class="text-2xl sm:text-3xl font-bold font-serif text-bbq-gold tracking-wide uppercase">4. SHARING TRAYS</h2>
+                <p class="text-xs text-gray-400 font-light">Large Trays for Gatherings & Events</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="menu-card pdf-card-frame bg-bbq-black p-6 rounded flex flex-col justify-between" data-category="sharing" data-allergens="peanuts,mustard" data-name="mega grill platter suya lamb chops wings turkey kebabs thighs">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl text-bbq-red font-serif tracking-wider uppercase">MEGA GRILL PLATTER</h3>
+                            <span class="text-2xl font-black text-bbq-gold">£95.00</span>
+                        </div>
+                        <p class="text-xs text-gray-300 mb-4 leading-relaxed">
+                            Suya, Lamb Chops (8), Chicken Wings (15), Turkey Wings (10), Kebabs (6) & Chicken Thighs (10)
+                        </p>
+                    </div>
+                    <button onclick="addToCart('tray-mega-grill', 'MEGA GRILL PLATTER', 95.00, 'Sharing Trays')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add Platter To Cart
+                    </button>
+                </div>
+
+                <div class="menu-card pdf-card-frame bg-bbq-black p-6 rounded flex flex-col justify-between" data-category="sharing" data-allergens="mustard" data-name="all-wings platter chicken turkey">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl text-bbq-red font-serif tracking-wider uppercase">ALL-WINGS PLATTER</h3>
+                            <span class="text-2xl font-black text-bbq-gold">£42.00</span>
+                        </div>
+                        <p class="text-xs text-gray-300 mb-4 leading-relaxed">
+                            Chicken Wings (30) & Turkey Wings (10) in signature glazes
+                        </p>
+                    </div>
+                    <button onclick="addToCart('tray-all-wings', 'ALL-WINGS PLATTER', 42.00, 'Sharing Trays')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add Platter To Cart
+                    </button>
+                </div>
+
+                <div class="menu-card pdf-card-frame bg-bbq-black p-6 rounded flex flex-col justify-between" data-category="sharing" data-allergens="peanuts,mustard" data-name="suya lovers platter beef whole chicken suya extra yaji">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl text-bbq-red font-serif tracking-wider uppercase">SUYA LOVERS PLATTER</h3>
+                            <span class="text-2xl font-black text-bbq-gold">£55.00</span>
+                        </div>
+                        <p class="text-xs text-gray-300 mb-4 leading-relaxed">
+                            Generous cuts of Beef & Whole Chicken Suya with extra Yaji spice
+                        </p>
+                    </div>
+                    <button onclick="addToCart('tray-suya-lovers', 'SUYA LOVERS PLATTER', 55.00, 'Sharing Trays')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add Platter To Cart
+                    </button>
+                </div>
+
+                <div class="menu-card pdf-card-frame bg-bbq-black p-6 rounded flex flex-col justify-between" data-category="sharing" data-allergens="mustard" data-name="mixed protein tray customized 4 proteins">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl text-bbq-red font-serif tracking-wider uppercase">MIXED PROTEIN TRAY</h3>
+                            <span class="text-2xl font-black text-bbq-gold">£60.00</span>
+                        </div>
+                        <p class="text-xs text-gray-300 mb-4 leading-relaxed">
+                            Customized crowd-pleaser with any 4 proteins of choice
+                        </p>
+                    </div>
+                    <button onclick="addToCart('tray-mixed-protein', 'MIXED PROTEIN TRAY', 60.00, 'Sharing Trays')" class="w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-plus"></i> Add Platter To Cart
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. BUILD YOUR OWN PLATTER -->
+        <section id="custom-builder" class="pdf-gold-frame bg-bbq-card p-6 sm:p-8 rounded relative overflow-hidden">
+            <div class="border-b border-bbq-gold/50 pb-4 mb-6">
+                <span class="text-xs text-bbq-orange font-bold uppercase tracking-widest block mb-1">INTERACTIVE BUILDER</span>
+                <h2 class="text-3xl font-extrabold font-serif text-bbq-gold uppercase">5. BUILD YOUR OWN PLATTER</h2>
+                <p class="text-xs text-gray-300 font-light">Fully customizable platters tailored to your taste.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-8 space-y-6">
+                    
+                    <!-- STEP 1: PROTEIN SELECTOR -->
+                    <div>
+                        <div class="flex items-center justify-between mb-3 border-b border-bbq-border pb-2">
+                            <h3 class="text-sm font-bold text-bbq-red uppercase tracking-wider font-serif">STEP 1: CHOOSE 3 TO 6 PROTEINS</h3>
+                            <span id="protein-count-badge" class="text-xs text-bbq-gold font-mono bg-bbq-black px-2.5 py-1 rounded border border-bbq-gold/40">0 / 6 Selected</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Beef Suya" data-price="36.00" class="protein-checkbox w-4 h-4 text-bbq-red rounded bg-bbq-card border-bbq-border accent-red-600">
+                                    <span class="text-xs font-semibold text-white">Beef Suya</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£36.00</span>
+                            </label>
+
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Lamb Chops (6 pieces)" data-price="22.00" class="protein-checkbox w-4 h-4 text-bbq-red rounded bg-bbq-card border-bbq-border accent-red-600">
+                                    <span class="text-xs font-semibold text-white">Lamb Chops (6 pieces)</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£22.00</span>
+                            </label>
+
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Croaker Fish Cuts (2 pieces)" data-price="11.00" class="protein-checkbox w-4 h-4 text-bbq-red rounded bg-bbq-card border-bbq-border accent-red-600">
+                                    <span class="text-xs font-semibold text-white">Croaker Fish Cuts (2 pcs)</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£11.00</span>
+                            </label>
+
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Turkey Wings (2 pieces)" data-price="8.00" class="protein-checkbox w-4 h-4 text-bbq-red rounded bg-bbq-card border-bbq-border accent-red-600">
+                                    <span class="text-xs font-semibold text-white">Turkey Wings (2 pieces)</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£8.00</span>
+                            </label>
+
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Chicken Kebabs (2 sticks)" data-price="10.00" class="protein-checkbox w-4 h-4 text-bbq-red rounded bg-bbq-card border-bbq-border accent-red-600">
+                                    <span class="text-xs font-semibold text-white">Chicken Kebabs (2 sticks)</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£10.00</span>
+                            </label>
+
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Chicken Thighs (3 pieces)" data-price="7.00" class="protein-checkbox w-4 h-4 text-bbq-red rounded bg-bbq-card border-bbq-border accent-red-600">
+                                    <span class="text-xs font-semibold text-white">Chicken Thighs (3 pieces)</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£7.00</span>
+                            </label>
+
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer sm:col-span-2">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Chicken Wings (10 wings)" data-price="9.50" class="protein-checkbox w-4 h-4 text-bbq-red rounded bg-bbq-card border-bbq-border accent-red-600">
+                                    <span class="text-xs font-semibold text-white">Chicken Wings (10 wings)</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£9.50</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: SIDES SELECTOR -->
+                    <div>
+                        <div class="flex items-center justify-between mb-3 border-b border-bbq-border pb-2">
+                            <h3 class="text-sm font-bold text-bbq-red uppercase tracking-wider font-serif">STEP 2: CHOOSE YOUR SIGNATURE SIDES</h3>
+                            <span class="text-xs text-gray-400">Optional Sides</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center gap-2">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Fried Plantain (Boli)" data-price="4.00" class="side-checkbox w-4 h-4 text-bbq-gold rounded bg-bbq-card border-bbq-border accent-amber-500">
+                                    <span class="text-xs text-white">Fried Plantain (Boli)</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£4.00</span>
+                            </label>
+
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center gap-2">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Flame-Grilled Corn" data-price="3.50" class="side-checkbox w-4 h-4 text-bbq-gold rounded bg-bbq-card border-bbq-border accent-amber-500">
+                                    <span class="text-xs text-white">Flame-Grilled Corn</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£3.50</span>
+                            </label>
+
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center gap-2">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Fried Yam" data-price="4.50" class="side-checkbox w-4 h-4 text-bbq-gold rounded bg-bbq-card border-bbq-border accent-amber-500">
+                                    <span class="text-xs text-white">Fried Yam</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£4.50</span>
+                            </label>
+
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center gap-2">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Jollof Rice" data-price="5.00" class="side-checkbox w-4 h-4 text-bbq-gold rounded bg-bbq-card border-bbq-border accent-amber-500">
+                                    <span class="text-xs text-white">Jollof Rice</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£5.00</span>
+                            </label>
+
+                            <label class="bg-bbq-black border border-bbq-border hover:border-bbq-gold p-3 rounded flex items-center justify-between cursor-pointer sm:col-span-2">
+                                <div class="flex items-center gap-2">
+                                    <input type="checkbox" onchange="updateCustomBuilder()" value="Sweet Corn" data-price="3.00" class="side-checkbox w-4 h-4 text-bbq-gold rounded bg-bbq-card border-bbq-border accent-amber-500">
+                                    <span class="text-xs text-white">Sweet Corn</span>
+                                </div>
+                                <span class="text-xs font-bold text-bbq-gold">£3.00</span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PLATTER BUILDER SUMMARY BOX -->
+                <div class="lg:col-span-4 bg-bbq-black border border-bbq-gold p-5 rounded flex flex-col justify-between space-y-4">
+                    <div>
+                        <h4 class="font-bold font-serif text-bbq-gold border-b border-bbq-gold/40 pb-2 mb-3 text-sm uppercase">Custom Platter Summary</h4>
+                        <div id="builder-summary-list" class="space-y-2 text-xs text-gray-400 min-h-[140px]">
+                            <p class="italic text-yellow-500">Select at least 3 proteins to proceed...</p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-bbq-gold/40 pt-4 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-300">Total Price:</span>
+                            <span id="builder-total-price" class="text-2xl font-black text-bbq-red font-serif">£0.00</span>
+                        </div>
+                        <button id="add-custom-btn" disabled onclick="addCustomPlatterToCart()" class="w-full bg-gray-800 text-gray-500 cursor-not-allowed font-bold py-3 px-4 rounded text-xs uppercase tracking-wider transition-all">
+                            Add Platter To Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATERING HUB & QR SECTION -->
+        <section id="catering" class="pdf-gold-frame bg-bbq-black p-8 text-center space-y-6">
+            <h2 class="text-3xl font-extrabold font-serif text-bbq-gold uppercase tracking-wider">READY TO ORDER OR BOOK CATERING</h2>
+            <p class="text-xs text-gray-300 max-w-xl mx-auto">Contact us for custom event platters, private party grilling, and corporate catering across the UK.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono max-w-4xl mx-auto pt-2">
+                <a href="tel:07938391725" class="bg-bbq-card p-4 rounded border border-bbq-gold/50 hover:border-bbq-red text-white transition-all block">
+                    <i class="fa-solid fa-phone text-bbq-red text-lg block mb-1"></i>
+                    07938391725
+                </a>
+                <a href="https://instagram.com/ekogrills_uk" target="_blank" class="bg-bbq-card p-4 rounded border border-bbq-gold/50 hover:border-bbq-red text-white transition-all block">
+                    <i class="fa-brands fa-instagram text-bbq-red text-lg block mb-1"></i>
+                    @ekogrills_uk
+                </a>
+                <a href="https://wa.me/447938391725" target="_blank" class="bg-bbq-card p-4 rounded border border-bbq-gold/50 hover:border-bbq-red text-white transition-all block">
+                    <i class="fa-solid fa-qrcode text-bbq-red text-lg block mb-1"></i>
+                    SCAN TO CHAT
+                </a>
+                <a href="mailto:ekogrillsuk@outlook.com" class="bg-bbq-card p-4 rounded border border-bbq-gold/50 hover:border-bbq-red text-white transition-all block">
+                    <i class="fa-solid fa-envelope text-bbq-red text-lg block mb-1"></i>
+                    ekogrillsuk@outlook.com
+                </a>
+            </div>
+
+            <!-- RED-BORDERED WHATSAPP QR CODE -->
+            <div class="pt-4 flex flex-col items-center">
+                <span class="text-[11px] font-bold text-bbq-gold uppercase tracking-wider mb-2">Scan QR Code Below To Chat Directly on WhatsApp</span>
+                <div class="w-36 h-36 bg-white p-2 rounded border-4 border-bbq-red shadow-2xl">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/447938391725" alt="WhatsApp QR Code" class="w-full h-full object-contain">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER & ALLERGEN SAFETY -->
+    <footer id="allergens-info" class="bg-bbq-dark border-t-2 border-bbq-gold/60 pt-10 pb-8 text-xs text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            
+            <div class="bg-bbq-black border border-bbq-gold/40 p-5 rounded space-y-2">
+                <div class="flex items-center gap-2 text-bbq-red font-bold font-serif text-sm">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span>ALLERGEN & SAFETY ADVISORY</span>
+                </div>
+                <p class="text-gray-300 text-xs leading-relaxed">
+                    Please inform us of any severe food allergies before placing your order.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px] text-gray-300 pt-2 font-mono">
+                    <div>• <strong>Yaji Spice / Suya:</strong> Peanuts, Ginger, Chili, Garlic, Mustard.</div>
+                    <div>• <strong>Fish Cuts:</strong> Croaker Fish (Seafood).</div>
+                    <div>• <strong>Glazes:</strong> Soy Sauce, Mustard, Vegetable Spice Blends.</div>
+                </div>
+            </div>
+
+            <div class="text-center font-serif text-gray-500 text-[11px] border-t border-bbq-border pt-6">
+                EKOGRILLS UK — The Flavour of Mercy — Authentic Flame Grilled BBQ
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART DRAWER WITH UBER / SELF DELIVERY NOTICE -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-all duration-300 opacity-0">
+        <div onclick="toggleCart()" id="cart-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-bbq-black border-l-2 border-bbq-gold shadow-2xl flex flex-col justify-between pointer-events-auto">
+                
+                <div class="p-5 border-b border-bbq-gold/40 flex items-center justify-between">
+                    <h2 class="text-lg font-bold text-bbq-gold font-serif uppercase tracking-wider">YOUR ORDER BASKET</h2>
+                    <button onclick="toggleCart()" class="text-gray-400 hover:text-white p-2">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+
+                <div id="cart-items" class="p-5 overflow-y-auto flex-1 space-y-3">
+                    <div class="text-center py-12 text-gray-500 font-mono text-xs">
+                        Your basket is currently empty.
+                    </div>
+                </div>
+
+                <div class="p-5 border-t border-bbq-gold/40 bg-bbq-dark space-y-4">
+                    
+                    <!-- SERVICE TYPE SELECTOR -->
+                    <div class="grid grid-cols-2 gap-2 text-xs font-bold">
+                        <button onclick="setOrderType('Pickup')" id="btn-pickup" class="py-2 rounded bg-bbq-red text-white border border-bbq-gold text-center">Pickup</button>
+                        <button onclick="setOrderType('Delivery')" id="btn-delivery" class="py-2 rounded bg-bbq-card text-gray-300 border border-bbq-border text-center">Delivery</button>
+                    </div>
+
+                    <!-- PROMINENT DELIVERY NOTICE BOX -->
+                    <div id="delivery-notice-box" class="bg-bbq-black border border-bbq-gold/60 p-3 rounded text-[11px] text-gray-300 space-y-1">
+                        <div class="flex items-center gap-1.5 text-bbq-gold font-bold">
+                            <i class="fa-solid fa-truck-fast text-bbq-red"></i> Delivery Notice:
+                        </div>
+                        <p class="leading-relaxed">
+                            If you require delivery, you can either <strong>arrange your own courier</strong> for pickup, or we can arrange <strong>Uber Delivery</strong> at an extra cost.
+                        </p>
+                    </div>
+
+                    <!-- SPICE LEVEL SELECTOR -->
+                    <div>
+                        <label class="text-[11px] text-bbq-gold block mb-1">Spice Level Preference:</label>
+                        <select id="spice-level" class="w-full bg-bbq-black border border-bbq-border text-white text-xs rounded p-2 focus:outline-none focus:border-bbq-gold">
+                            <option value="Standard Yaji Spice">Standard Yaji Spice</option>
+                            <option value="Extra Spicy Yaji">Extra Spicy Yaji</option>
+                            <option value="Light Spice">Light Spice</option>
+                        </select>
+                    </div>
+
+                    <!-- TOTAL DISPLAY -->
+                    <div class="flex justify-between text-base font-bold text-white font-serif border-t border-bbq-border pt-3">
+                        <span>Total:</span>
+                        <span id="cart-total" class="text-bbq-red">£0.00</span>
+                    </div>
+
+                    <!-- CHECKOUT EXPORT BUTTONS -->
+                    <div class="space-y-2">
+                        <button onclick="checkoutWhatsApp()" class="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-3 rounded text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Checkout via WhatsApp
+                        </button>
+                        <button onclick="checkoutEmail()" class="w-full bg-bbq-black hover:bg-bbq-card text-bbq-gold border border-bbq-gold font-bold py-2.5 rounded text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-envelope"></i> Checkout via Email
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- DISH EXPLAINER MODAL -->
+    <div id="dish-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-bbq-black border-2 border-bbq-gold rounded p-6 max-w-md w-full space-y-4 relative shadow-2xl">
+            <button onclick="closeDishModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <h3 id="modal-title" class="text-xl font-bold text-bbq-red font-serif uppercase"></h3>
+            <p id="modal-desc" class="text-xs text-gray-300 leading-relaxed font-light"></p>
+            <button onclick="closeDishModal()" class="w-full bg-bbq-dark border border-bbq-gold text-bbq-gold font-bold py-2 rounded text-xs uppercase">Close</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        let orderType = 'Pickup';
+        let activeAllergenFilters = new Set();
+        let customPlatter = { proteins: [], sides: [], total: 0 };
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            if (drawer.classList.contains('opacity-0')) {
+                drawer.classList.remove('opacity-0', 'pointer-events-none');
+                drawer.classList.add('opacity-100');
+            } else {
+                drawer.classList.add('opacity-0', 'pointer-events-none');
+                drawer.classList.remove('opacity-100');
+            }
+        }
+
+        function setOrderType(type) {
+            orderType = type;
+            document.getElementById('btn-pickup').className = type === 'Pickup' ? "py-2 rounded bg-bbq-red text-white border border-bbq-gold text-center" : "py-2 rounded bg-bbq-card text-gray-300 border border-bbq-border text-center";
+            document.getElementById('btn-delivery').className = type === 'Delivery' ? "py-2 rounded bg-bbq-red text-white border border-bbq-gold text-center" : "py-2 rounded bg-bbq-card text-gray-300 border border-bbq-border text-center";
+        }
+
+        function addToCart(id, name, price, category) {
+            const existing = cart.find(item => item.id === id);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ id, name, price: parseFloat(price), category, quantity: 1 });
+            }
+            updateCartUI();
+            toggleCart();
+        }
+
+        function updateQuantity(id, change) {
+            const index = cart.findIndex(item => item.id === id);
+            if (index > -1) {
+                cart[index].quantity += change;
+                if (cart[index].quantity <= 0) cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cart-items');
+            const badge = document.getElementById('cart-badge');
+            const totalEl = document.getElementById('cart-total');
+
+            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+            badge.innerText = count;
+
+            if (cart.length === 0) {
+                container.innerHTML = `<div class="text-center py-12 text-gray-500 font-mono text-xs">Your basket is currently empty.</div>`;
+                totalEl.innerText = '£0.00';
+                return;
+            }
+
+            let total = 0;
+            container.innerHTML = cart.map(item => {
+                const sum = item.price * item.quantity;
+                total += sum;
+                return `
+                    <div class="bg-bbq-card border border-bbq-border rounded p-3 flex items-center justify-between">
+                        <div>
+                            <h4 class="text-xs font-bold text-white font-serif uppercase">${item.name}</h4>
+                            <span class="text-xs font-mono text-bbq-gold">£${sum.toFixed(2)}</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-bbq-black border border-bbq-border rounded p-1">
+                            <button onclick="updateQuantity('${item.id}', -1)" class="w-5 h-5 text-gray-300 font-bold text-xs hover:text-white">-</button>
+                            <span class="text-xs text-white px-1 font-bold">${item.quantity}</span>
+                            <button onclick="updateQuantity('${item.id}', 1)" class="w-5 h-5 text-gray-300 font-bold text-xs hover:text-white">+</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            totalEl.innerText = `£${total.toFixed(2)}`;
+        }
+
+        function updateCustomBuilder() {
+            const proteinBoxes = document.querySelectorAll('.protein-checkbox:checked');
+            const sideBoxes = document.querySelectorAll('.side-checkbox:checked');
+            const countBadge = document.getElementById('protein-count-badge');
+            const summaryList = document.getElementById('builder-summary-list');
+            const totalPriceEl = document.getElementById('builder-total-price');
+            const addBtn = document.getElementById('add-custom-btn');
+
+            let selectedProteins = [];
+            let selectedSides = [];
+            let total = 0;
+
+            proteinBoxes.forEach(b => {
+                const price = parseFloat(b.dataset.price);
+                selectedProteins.push({ name: b.value, price });
+                total += price;
+            });
+
+            sideBoxes.forEach(b => {
+                const price = parseFloat(b.dataset.price);
+                selectedSides.push({ name: b.value, price });
+                total += price;
+            });
+
+            const pCount = selectedProteins.length;
+            countBadge.innerText = `${pCount} / 6 Selected`;
+
+            if (pCount < 3) {
+                summaryList.innerHTML = `<p class="italic text-yellow-500">Select at least 3 proteins (Currently: ${pCount}).</p>`;
+                addBtn.disabled = true;
+                addBtn.className = "w-full bg-gray-800 text-gray-500 cursor-not-allowed font-bold py-3 px-4 rounded text-xs uppercase tracking-wider transition-all";
+            } else if (pCount > 6) {
+                summaryList.innerHTML = `<p class="italic text-red-500 font-bold">Maximum 6 proteins allowed! Please uncheck ${pCount - 6}.</p>`;
+                addBtn.disabled = true;
+                addBtn.className = "w-full bg-gray-800 text-gray-500 cursor-not-allowed font-bold py-3 px-4 rounded text-xs uppercase tracking-wider transition-all";
+            } else {
+                let html = '<p class="font-bold text-white text-xs mb-1">Selected Proteins:</p>';
+                selectedProteins.forEach(p => html += `<div class="flex justify-between"><span>• ${p.name}</span><span>£${p.price.toFixed(2)}</span></div>`);
+                if (selectedSides.length > 0) {
+                    html += '<p class="font-bold text-white text-xs mt-2 mb-1">Selected Sides:</p>';
+                    selectedSides.forEach(s => html += `<div class="flex justify-between"><span>• ${s.name}</span><span>£${s.price.toFixed(2)}</span></div>`);
+                }
+                summaryList.innerHTML = html;
+                addBtn.disabled = false;
+                addBtn.className = "w-full bg-bbq-red hover:bg-red-700 text-white font-bold py-3 px-4 rounded text-xs uppercase tracking-wider border border-bbq-gold transition-all cursor-pointer";
+            }
+
+            totalPriceEl.innerText = `£${total.toFixed(2)}`;
+            customPlatter = { proteins: selectedProteins, sides: selectedSides, total };
+        }
+
+        function addCustomPlatterToCart() {
+            if (customPlatter.proteins.length < 3 || customPlatter.proteins.length > 6) return;
+            const proteinNames = customPlatter.proteins.map(p => p.name).join(', ');
+            const sideNames = customPlatter.sides.length > 0 ? ` + Sides (${customPlatter.sides.map(s => s.name).join(', ')})` : '';
+            const title = `Custom Platter (${customPlatter.proteins.length} Proteins: ${proteinNames}${sideNames})`;
+            
+            addToCart('custom-' + Date.now(), title, customPlatter.total, 'Build Your Own');
+
+            // Reset checkboxes
+            document.querySelectorAll('.protein-checkbox, .side-checkbox').forEach(cb => cb.checked = false);
+            updateCustomBuilder();
+        }
+
+        function filterCategory(cat, evt) {
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.className = "cat-btn bg-bbq-black hover:bg-bbq-border text-bbq-gold font-bold text-xs px-4 py-2 rounded uppercase tracking-wider transition-all border border-bbq-gold/40";
+            });
+            if (evt && evt.target) {
+                evt.target.className = "cat-btn active bg-bbq-red text-white font-bold text-xs px-4 py-2 rounded uppercase tracking-wider transition-all border border-bbq-gold";
+            }
+
+            document.querySelectorAll('.menu-card').forEach(card => {
+                if (cat === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.toggle('hidden', card.dataset.category !== cat);
+                }
+            });
+
+            if (cat === 'builder') {
+                const builderSection = document.getElementById('custom-builder');
+                if (builderSection) builderSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function filterMenu() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            document.querySelectorAll('.menu-card').forEach(card => {
+                const name = card.dataset.name ? card.dataset.name.toLowerCase() : '';
+                card.classList.toggle('hidden', !name.includes(query));
+            });
+        }
+
+        function toggleAllergenFilter(allergen) {
+            const btn = document.getElementById(`alg-${allergen}`);
+            if (activeAllergenFilters.has(allergen)) {
+                activeAllergenFilters.delete(allergen);
+                btn.classList.remove('border-red-500', 'bg-red-950/40');
+            } else {
+                activeAllergenFilters.add(allergen);
+                btn.classList.add('border-red-500', 'bg-red-950/40');
+            }
+            applyAllergenFlags();
+        }
+
+        function resetAllergenFilters() {
+            activeAllergenFilters.clear();
+            document.querySelectorAll('.allergen-btn').forEach(btn => btn.classList.remove('border-red-500', 'bg-red-950/40'));
+            applyAllergenFlags();
+        }
+
+        function applyAllergenFlags() {
+            document.querySelectorAll('.menu-card').forEach(card => {
+                const list = (card.dataset.allergens || '').split(',');
+                const hasMatch = Array.from(activeAllergenFilters).some(a => list.includes(a));
+                card.classList.toggle('border-red-500', hasMatch);
+            });
+        }
+
+        function explainDish(title, desc) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('dish-modal').classList.remove('hidden');
+        }
+
+        function closeDishModal() {
+            document.getElementById('dish-modal').classList.add('hidden');
+        }
+
+        function generateText() {
+            if (cart.length === 0) return null;
+            let text = `*EKOGRILLS UK ORDER*\nService: ${orderType}\nSpice Preference: ${document.getElementById('spice-level').value}\n`;
+            
+            if (orderType === 'Delivery') {
+                text += `Delivery Note: Customer will arrange courier OR request Uber Delivery at extra cost.\n`;
+            }
+
+            text += `\n*ITEMS ORDERED:*\n`;
+            cart.forEach((item, i) => {
+                text += `${i+1}. ${item.name} (x${item.quantity}) - £${(item.price * item.quantity).toFixed(2)}\n`;
+            });
+            text += `\n*Total Amount:* ${document.getElementById('cart-total').innerText}`;
+            return text;
+        }
+
+        function checkoutWhatsApp() {
+            const text = generateText();
+            if (!text) return;
+            window.open(`https://wa.me/447938391725?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        function checkoutEmail() {
+            const text = generateText();
+            if (!text) return;
+            window.location.href = `mailto:ekogrillsuk@outlook.com?subject=New EkoGrills Order (${orderType})&body=${encodeURIComponent(text)}`;
+        }
+    </script>
+</body>
+</html>
