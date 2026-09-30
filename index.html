@@ -843,15 +843,21 @@
         let customPlatter = { proteins: [], sides: [], total: 0 };
 
         function toggleCart() {
-            const drawer = document.getElementById('cart-drawer');
-            if (drawer.classList.contains('opacity-0')) {
-                drawer.classList.remove('opacity-0', 'pointer-events-none');
-                drawer.classList.add('opacity-100');
-            } else {
-                drawer.classList.add('opacity-0', 'pointer-events-none');
-                drawer.classList.remove('opacity-100');
-            }
-        }
+    const drawer = document.getElementById('cart-drawer');
+    if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        setTimeout(() => {
+            drawer.classList.remove('opacity-0', 'pointer-events-none');
+            drawer.classList.add('opacity-100');
+        }, 10);
+    } else {
+        drawer.classList.add('opacity-0', 'pointer-events-none');
+        drawer.classList.remove('opacity-100');
+        setTimeout(() => {
+            drawer.classList.add('hidden');
+        }, 300);
+    }
+}
 
         function setOrderType(type) {
             orderType = type;
